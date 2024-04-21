@@ -1,0 +1,5 @@
+# Built site
+_site
+
+# Programming environment
+node_modules
