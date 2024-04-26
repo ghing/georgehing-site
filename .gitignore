@@ -3,3 +3,6 @@ _site
 
 # Programming environment
 node_modules
+
+# Operating system
+.DS_Store
