@@ -1,0 +1,20 @@
+
+{
+    "organizations": [
+        {
+            "name": "WITF",
+            "donation_url": "https://donate.witf.org/witf/donate-evolvsms",
+            "relationship": "George was an avid public radio listener. He listened to, and yelled at, news programs like Morning Edition and All Things Considered. He also enjoyed long-form storyelling programs like This American Life and Radiolab."
+        },
+        {
+            "name": "Recycle Bicycle",
+            "donation_url": "https://rbhburg.org/help/donate/",
+            "relationship": "Repairing and restoring bicycles was a lifelong passion of George's. He volunteered his skills at Recycle Bicycle and shared his deep knowledge of bicycles and repair methods with other volunteers."
+        },
+        {
+            "name": "Carlisle Theatre",
+            "donation_url": "https://carlisletheatre.org/donate/",
+            "relationship": "George always had music playing in the background of his life. He volunteered as an usher at the Carlisle Theatre and enjoyed the chance it gave him to see live music, especially tribute performers playing the songs of his lifetime."
+        }
+    ]
+}
