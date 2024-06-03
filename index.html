@@ -1,73 +1,47 @@
-<!DOCTYPE html>
-<html class="" lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Remembering George Hing</title>
+---
+layout: base.liquid
+title: Remembering George Hing
+---
+<main>
+  <h1>In memory of George Hing</h1>
+  <img
+    src="img/george-park-bike.jpg"
+    alt="George Hing with his folding bike stopped along a path in the park"
+    class="img-main"
+  />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
+  <p class="tagline">
+    Ng George L. Hing, of Boiling Springs, Pennsylvania passed away on
+    Saturday, April 6, 2024.
+  </p>
 
-    <link rel="stylesheet" href="css/style.css" />
+  <h2>Celebration of Life</h2>
 
-    <meta
-      name="description"
-      content="A memorial and obituary for George Hing of Boiling Springs, Pennsylvania"
-    />
+  <p>
+    A celebration of George's life will be on June 8, 2024 at 11:00 a.m. at
+    <a href="https://www.stjboilingsprings.org/"
+      >St. John Lutheran Church</a
+    >, <a href="https://maps.app.goo.gl/tXovQENhtvQ3QgUo7">111 Walnut St., Boiling Springs, PA, 17007.</a>
+  </p>
 
-    <meta property="og:title" content="Remembering George Hing" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://georgehing.life" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:alt" content="" />
+  <p>The family will greet guests before the ceremony. All guests are invited to share a light meal afterwards.</p>
 
-    <link rel="apple-touch-icon" href="icon.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-  </head>
+  <h2>Memories</h2>
 
-  <body>
-    <main>
-      <h1>In memory of George Hing</h1>
-      <img
-        src="img/george-park-bike.jpg"
-        alt="George Hing with his folding bike stopped along a path in the park"
-        class="img-main"
-      />
+  <p class="center"><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfrSZ_laBis7ueoUt47R-JcXKu-0i7fEYDsqd8WtoXEs5gNfA/viewform?usp=sf_link" target="_blank">Share a Memory</a></p>
 
-      <p class="tagline">
-        Ng George L. Hing, of Boiling Springs, Pennsylvania passed away on
-        Saturday, April 6, 2024.
-      </p>
+  {% for memory in memories | cleanmemories %}
+  <div>
+    <h3>From {{ memory["Your name"] }}</h3>
+    {{ memory["Share a memory of George or a message to his family"] | paragraphify }}
+  </div>
+  {% endfor %}
 
-      <h2>Celebration of Life</h2>
-
-      <p>
-        A celebration of George's life will be on June 8, 2024 at 11:00 a.m. at
-        <a href="https://www.stjboilingsprings.org/"
-          >St. John Lutheran Church</a
-        >, <a href="https://maps.app.goo.gl/tXovQENhtvQ3QgUo7">111 Walnut St., Boiling Springs, PA, 17007.</a>
-      </p>
-
-      <p>The family will greet guests before the ceremony. All guests are invited to share a light meal afterwards.</p>
-
-      <h2>Memories</h2>
-
-      <p class="center"><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfrSZ_laBis7ueoUt47R-JcXKu-0i7fEYDsqd8WtoXEs5gNfA/viewform?usp=sf_link" target="_blank">Share a Memory</a></p>
-
-      <h2>Make a Gift in George's Honor</h2>
-      <p>Instead of sending flowers to the family, consider making a gift in George's honor to one of these nonprofit organizations.</p>
-      <ul>
-      {% for organization in donationRecipients.organizations %}
-      <li><a href="{{ organization.donation_url }}">{{ organization.name }}</a>: {{ organization.relationship }}</li>
-      {% endfor %}
-      </ul>
-    </main>
-  </body>
-</html>
+  <h2>Make a Gift in George's Honor</h2>
+  <p>Instead of sending flowers to the family, consider making a gift in George's honor to one of these nonprofit organizations.</p>
+  <ul>
+  {% for organization in donationRecipients.organizations %}
+  <li><a href="{{ organization.donation_url }}">{{ organization.name }}</a>: {{ organization.relationship }}</li>
+  {% endfor %}
+  </ul>
+</main>

@@ -8,4 +8,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site.webmanifest");
 
   eleventyConfig.addPassthroughCopy("img");
+
+  eleventyConfig.addFilter("paragraphify", value => {
+    return value.split("\n").map(p => `<p>${p}</p>`).join("");
+  });
 };
